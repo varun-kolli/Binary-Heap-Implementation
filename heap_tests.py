@@ -65,6 +65,12 @@ class TestHeap(unittest.TestCase):
         test_heap.heap_sort_ascending(list1)
         self.assertEqual(list1, [2, 5, 6, 7, 8, 9])
 
+    def test_extra(self):
+        test_heap = MaxHeap(0)
+        self.assertFalse(test_heap.enqueue(1))
+        self.assertIsNone(test_heap.peek())
+        self.assertIsNone(test_heap.dequeue())
+
 
 if __name__ == "__main__":
     unittest.main()
