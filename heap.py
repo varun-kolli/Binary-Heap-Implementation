@@ -102,8 +102,6 @@ class MaxHeap:
             self.perc_down(i)
             i -= 1
 
-
-
     def is_empty(self):
         '''returns True if the heap is empty, false otherwise'''
         return self.size == 0
@@ -132,8 +130,11 @@ class MaxHeap:
         self.heap = [0]
         for i in alist:
             self.enqueue(i)
-        for i in range(len(alist) - 1, 0, -1):
+        for i in range(len(alist) - 1, -1, -1):
             alist[i] = self.dequeue()
+
+
+
 
 
 
